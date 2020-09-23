@@ -1,0 +1,245 @@
+$font: 'Raleway', 'Segoe UI', 'Century Gothic', sans-serif;
+$mainColor: #FAF9CF;
+$secColor: #444444;
+$victory: #98FA5C;
+$defeat:#D12D2A;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+  font-size: 12px;
+}
+
+body{
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: $mainColor;
+    color: $secColor;
+}
+
+button{
+    font-family: $font;
+    color: inherit;
+    background-color: inherit;
+    outline: none;
+}
+
+h1 {
+    font-size: 3.052em;
+  }
+  
+  h2 {font-size: 2.441em;}
+  
+  h3 {font-size: 1.953em;}
+  
+  h4 {
+    font-size: 1.563em;
+    font-weight: 400;
+  }
+  
+  h5, p, li, footer {font-size: 1.25em;}
+  
+  small, .text_small {font-size: 0.8em;}
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header{
+      width: 90vw;
+      height: 8vh;
+      padding: 5vh 5vw;
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+      h1{
+          text-align: right;
+      }
+  }
+
+  main{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 79vh;
+  }
+
+  button{
+    border: $secColor solid 0.1em;
+    border-radius: 0.5em;
+  }
+
+  .lang-btn{
+    width: 2.2em;
+    height: 2.2em;
+    font-size: 2.441em;
+    margin: 0.2em;
+    padding: 0.2em;
+
+    &:hover{
+      font-weight: 650;
+    }
+  }
+
+  .rules{
+    padding: 2em;
+    h2{
+      text-align: center;
+      margin-bottom: 0.4em;
+    }
+  }
+
+  .keyboard-btn{
+    font-size: 1.953em;
+    margin: 0.2em;
+    padding: 0.2em;
+    width: 2em;
+    height: 2em;
+    &:hover{
+      font-weight: 650;
+    }
+    &:active{
+      background-color: $secColor;
+      color: $mainColor;
+    }
+  }
+
+  .space-btn{
+    width: 40%;
+  }
+  .backspace-btn{
+    width: 35%;
+  }
+  .accept-btn{
+    width: 100%;
+    background-color: $victory;
+  }
+
+  .keyboard{
+      margin-top: 1em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+  }
+
+  .typer-control-panel{
+    width: 100%;
+  }
+
+  .phrase-input{
+      height: 20vh;
+  }
+
+  .phrase-letters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .phrase-char{
+    width: 2.441em;
+    margin: 1em;
+    border-bottom: black solid 0.1em;
+    h1{
+      text-align: center;
+    }
+  }
+
+  .end-screen{
+    border: $secColor solid 0.2em;
+    border-radius: 1em;
+    width: 80vw;
+    height: 60vh;
+    text-align: center;
+    h1{
+      margin: 0.8em;
+    }
+    h2,p{
+      margin-bottom: 0.8em;
+    }
+  }
+
+  .victory{
+    background-color: $victory;
+  }
+
+  .defeat{
+    background-color: $defeat;
+    color: $mainColor;
+  }
+
+  .again-btn{
+    font-size: 1.953em;
+    background-color: $secColor;
+    color: $mainColor;
+    padding: 0.2em;
+    margin: 0.2em;
+    border: $mainColor solid 0.05em;
+    &:hover{
+      background-color: $mainColor;
+      color: $secColor;
+    }
+  }
+
+  .hangman{
+    border: $secColor solid 0.2em;
+    border-radius: 1em;
+    padding: 2em;
+    width: 50vw;
+  }
+
+  .hangman-stroke {
+    fill: none;
+    stroke: #444;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-width: 0.8em;
+  }
+
+  svg#hangman-graphic{
+    width: 100%;
+  }
+
+  footer{
+      text-align: center;
+      height: 2vh;
+      font-weight: 600;
+  }
+
+//TABLETS, LAPTOPS AND DESKTOPS
+  @media (min-width: 768px){
+    html{
+      font-size: 16px;
+    }
+
+    .hangman{
+      width: 22vw;
+    }
+
+    .keyboard{
+      width: 80vw;
+    }
+
+  }
+
+//1440p DESKTOPS
+@media (min-width: 2300px){
+  html{
+      font-size: 140%;
+  }
+}
+
+//4k DESKTOPS
+@media (min-width: 3000px){
+  html{
+      font-size: 225%;
+  }
+}

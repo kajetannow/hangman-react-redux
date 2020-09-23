@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Index from './components/IndexPage';
+import Phrase from './components/PhrasePage';
+import Guessing from './components/GuessingPage';
+import Layout from './components/Layout';
+import Victory from './components/Victory';
+import Defeat from './components/Defeat';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <Switch>
+          
+          <Route path='/phrase'><Phrase /></Route>
+          <Route path='/guessing'><Guessing /></Route>
+          <Route path='/victory'><Victory /></Route>
+          <Route path='/defeat'><Defeat /></Route>
+          <Route path='/'><Index /></Route>
+
+        </Switch>
+      </Layout>
+    </Router>
   );
 }
 
